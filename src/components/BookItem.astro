@@ -1,0 +1,18 @@
+---
+export interface Props {
+  title: string
+  img: string
+  id: string
+}
+
+const {id, title, img } = Astro.props;
+---
+
+<a class="hover:scale-105 hover:contrast-125 hover:shadow-2xl inline-block transition-all" href=`/${id}`>
+  <img
+    class="aspect-[389/500] h-full object-cover max-w-full rounded"
+    src=`${img}`
+    alt=`Portada del libro ${title}`
+    style=`view-transition-name: book-${id}`
+  />
+</a>
